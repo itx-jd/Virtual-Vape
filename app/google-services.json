@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690591860555",
+    "project_id": "smartappbundle",
+    "storage_bucket": "smartappbundle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690591860555:android:42d50347e4f0a817e08ace",
+        "android_client_info": {
+          "package_name": "ccom.codex.statussaver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690591860555-jubcpnqc0457ticqv9vktb0a6rcnfp7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBghbN1VkwwNCMTuv-EQJH7eZIE7A8YW1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690591860555-jubcpnqc0457ticqv9vktb0a6rcnfp7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

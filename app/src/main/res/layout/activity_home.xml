@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+<!--    Background-->
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-5dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg" />
+
+<!--    Point text view-->
+
+    <TextView
+        android:id="@+id/tv_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+52"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="90dp"
+        android:visibility="gone"/>
+
+
+<!--    Vape-->
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/vape" />
+
+            <ProgressBar
+                android:id="@+id/flavour_progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:alpha="0.8"
+                android:background="@drawable/flavour_bar_background"
+                android:max="1000"
+                android:progressDrawable="@drawable/blue_flavour_progress_bar"
+                android:rotation="270" />
+
+            <Button
+                android:id="@+id/bt_vape"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="250dp"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_vapeBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@mipmap/holder_1"/>
+
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/smoke"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-150dp"
+        android:src="@drawable/smoke3"
+        android:visibility="gone"/>
+
+<!--    Progress Bar-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="-150dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/progress_bar_background"
+        android:max="100"
+        android:padding="5dp"
+        android:progress="1"
+        android:progressDrawable="@drawable/curved_progress_bar"
+        android:rotation="270" />
+
+<!--    default height of flavour is 90dp-->
+
+
+<!--    Title bar-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/coin"
+                app:tint="@color/text_color"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/text_color"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/tv_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="@color/text_color"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/dark_back"
+            android:clickable="true"
+            android:onClick="close_app"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                android:textColor="@color/text_color"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+<!--    Earn Settings-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="200dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earn"
+            android:textSize="25dp"
+            android:textColor="@color/text_color"/>
+
+        <ImageView
+            android:id="@+id/iv_earnDialog"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/coin"
+            app:tint="@color/text_color"
+            android:onClick="earn_dialog"/>
+
+    </LinearLayout>
+
+<!--    setting layout-->
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:id="@+id/iv_soundSetting"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="sound"
+            android:src="@drawable/ic_baseline_settings_24"
+            app:tint="@color/text_color" />
+
+        <ImageView
+            android:id="@+id/iv_market"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:onClick="market"
+            android:src="@drawable/ic_baseline_shopping_cart_24"
+            app:tint="@color/text_color" />
+
+    </RelativeLayout>
+
+<!--    Banner AD-->
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner_ad" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner_down" />
+
+<!--    market layout-->
+
+    <RelativeLayout
+        android:id="@+id/rl_market"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:src="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_baseline_close_24"
+            app:tint="@color/white"
+            android:onClick="close_market"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vape Shop "
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="200dp"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="2"
+            android:layout_marginTop="120dp"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_back"
+                android:padding="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="flavour">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/flavour"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flavours"
+                    android:textSize="25dp"
+                    android:textColor="@color/text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_back"
+                android:padding="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="battery">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/holder_1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Batteries"
+                    android:textSize="25dp"
+                    android:textColor="@color/text_color"/>
+
+            </LinearLayout>
+
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+<!--    battery layout-->
+
+    <RelativeLayout
+        android:id="@+id/rl_battery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:src="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_baseline_close_24"
+            app:tint="@color/white"
+            android:onClick="close_battery"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="Batteries"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="2"
+            android:layout_marginTop="120dp"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_back"
+                android:padding="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="battery1">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/holder_1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10000$"
+                    android:textSize="25dp"
+                    android:textColor="@color/text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_back"
+                android:padding="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="battery2">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/holder_2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20000$"
+                    android:textSize="25dp"
+                    android:textColor="@color/text_color"/>
+
+            </LinearLayout>
+
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+<!--    flavour layout-->
+
+    <RelativeLayout
+        android:id="@+id/rl_flavour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:src="@color/black" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="close_flavour"
+            android:src="@drawable/ic_baseline_close_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:text="Vape Flavors"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_marginTop="120dp"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_back"
+                android:padding="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="blue">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000$"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_back"
+                android:padding="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="red">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/red"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2000$"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_back"
+                android:padding="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="orange">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/orange"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3000$"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_back"
+                android:padding="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="sky">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/zink"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4000$"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_color"/>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+<!--    sound layout-->
+
+    <RelativeLayout
+        android:id="@+id/rl_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:src="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_baseline_close_24"
+            app:tint="@color/white"
+            android:onClick="close_music"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="Music"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <com.xw.repo.BubbleSeekBar
+            android:id="@+id/music_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="350dp"
+            app:bsb_thumb_radius="7dp"
+
+            app:bsb_thumb_color="@color/white"
+
+            app:bsb_bubble_color="@color/white"
+            app:bsb_bubble_text_color="@color/black"
+
+            app:bsb_track_color="@color/text_color"
+            app:bsb_second_track_color="@color/white"
+
+            app:bsb_section_text_position="bottom_sides"
+            app:bsb_progress="50"
+            app:bsb_max="100"
+            app:bsb_min="0"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

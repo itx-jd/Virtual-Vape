@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">Virtual Vape</string>
+    <string name="timer">60000</string>
+    <string name="app_version">1.0.0</string>
+
+    <!--    Notification-->
+
+    <string name="title">New WhatsApp Status Alert !</string>
+    <string name="body">Click here to download now</string>
+
+    <!--AdMob Id-->
+
+<!--    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>-->
+<!--    <string name="admob_banner_ad">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="admob_banner_down">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="admob_interstitial_ad">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--    <string name="admob_reward_ad">ca-app-pub-3940256099942544/5224354917</string>-->
+
+    <string name="admob_app_id">ca-app-pub-6463903001602185~7111140935</string>
+    <string name="admob_banner_ad">ca-app-pub-6463903001602185/8041079224</string>
+    <string name="admob_banner_down">ca-app-pub-6463903001602185/4457057437</string>
+    <string name="admob_interstitial_ad">ca-app-pub-6463903001602185/6891649080</string>
+    <string name="admob_reward_ad">ca-app-pub-6463903001602185/6508753124</string>
+
+    <!--AdMob Id-->
+
+    <string name="sharesub">WhatsApp Status Saver App</string>
+    <string name="shareBody">Download Status Saver For WhatsApp Now - https://play.google.com/store/apps/details?id=</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
