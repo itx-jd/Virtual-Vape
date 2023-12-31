@@ -10,6 +10,10 @@ Welcome to the Virtual Vape Simulator, an Android Java app that provides a fun a
 - **In-App Shop:** Spend your earned points on batteries and new vape flavors from the in-built shop.
 - **Free and Open Source:** The game is completely free and open source, allowing anyone to use, modify, and contribute.
 
+## Screenshots
+
+![](image/image.gif)
+
 ## Getting Started
 
 ### Prerequisites
